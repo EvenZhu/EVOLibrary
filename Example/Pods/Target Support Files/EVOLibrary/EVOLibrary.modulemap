@@ -1,0 +1,6 @@
+framework module EVOLibrary {
+  umbrella header "EVOLibrary-umbrella.h"
+
+  export *
+  module * { export * }
+}

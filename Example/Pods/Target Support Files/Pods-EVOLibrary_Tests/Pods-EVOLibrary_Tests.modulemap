@@ -1,0 +1,6 @@
+framework module Pods_EVOLibrary_Tests {
+  umbrella header "Pods-EVOLibrary_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
