@@ -1,22 +1,28 @@
 {
   "name": "EVOLibrary",
   "version": "0.1.0",
-  "summary": "A short description of EVOLibrary.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/wbxxmya@163.com/EVOLibrary",
+  "summary": "Even的OC代码库",
+  "description": "内含常用宏定义、系统分类、扩展功能、快捷工具等，采用EVO前缀，避免与其他库宏定义、类、及变量名冲突",
+  "homepage": "https://github.com/EvenZhu/EVOLibrary",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "wbxxmya@163.com": "even.199010@gmail.com"
+    "EvenZhu": "even.199010@gmail.com"
   },
   "source": {
-    "git": "https://github.com/wbxxmya@163.com/EVOLibrary.git",
+    "git": "https://github.com/EvenZhu/EVOLibrary.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "9.0"
+    "ios": "10.0"
   },
-  "source_files": "EVOLibrary/Classes/**/*"
+  "source_files": "EVOLibrary/Classes/EVOMacro.h",
+  "subspecs": [
+    {
+      "name": "Category",
+      "source_files": "EVOLibrary/Classes/Category/*.{h,m}"
+    }
+  ]
 }

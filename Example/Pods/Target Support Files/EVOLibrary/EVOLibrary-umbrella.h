@@ -10,6 +10,8 @@
 #endif
 #endif
 
+#import "EVOMacro.h"
+#import "NSString+EVOFormat.h"
 
 FOUNDATION_EXPORT double EVOLibraryVersionNumber;
 FOUNDATION_EXPORT const unsigned char EVOLibraryVersionString[];

@@ -1,5 +1,7 @@
 PODS:
-  - EVOLibrary (0.1.0)
+  - EVOLibrary (0.1.0):
+    - EVOLibrary/Category (= 0.1.0)
+  - EVOLibrary/Category (0.1.0)
   - Expecta (1.0.6)
   - "Expecta+Snapshots (3.1.1)":
     - Expecta (~> 1.0)
@@ -31,12 +33,12 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  EVOLibrary: 34d1a2df5bb197b9a60a9a1f91447a403263c409
+  EVOLibrary: c28c17b71632efb80edd05932df92287061d6c5e
   Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
   "Expecta+Snapshots": dcff217eef506dabd6dfdc7864ea2da321fafbb8
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
 
-PODFILE CHECKSUM: 95cf2b2f26190a4408804e0f29b76a805415e120
+PODFILE CHECKSUM: 615834af91f824cc460b525b176bb5b4e34e5268
 
 COCOAPODS: 1.11.2

@@ -1,8 +1,9 @@
 use_frameworks!
 
-platform :ios, '9.0'
+platform :ios, '12.0'
 
 target 'EVOLibrary_Example' do
+#  pod 'EVOLibrary', :git => 'https://github.com/EvenZhu/EVOLibrary.git'
   pod 'EVOLibrary', :path => '../'
 
   target 'EVOLibrary_Tests' do

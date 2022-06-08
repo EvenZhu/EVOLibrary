@@ -22,7 +22,6 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
-		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		B01AA8C12D7FF28D8FBD9423 /* Pods_EVOLibrary_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D173B849728C414AF83302 /* Pods_EVOLibrary_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +38,7 @@
 /* Begin PBXFileReference section */
 		0617F6F81710FA603D777530 /* Pods-EVOLibrary_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EVOLibrary_Example.debug.xcconfig"; path = "Target Support Files/Pods-EVOLibrary_Example/Pods-EVOLibrary_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		22D173B849728C414AF83302 /* Pods_EVOLibrary_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EVOLibrary_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		30D66ED1C2E77434F435DAA8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		30D66ED1C2E77434F435DAA8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		32CE4DCD287667A294A7A57C /* Pods-EVOLibrary_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EVOLibrary_Tests.debug.xcconfig"; path = "Target Support Files/Pods-EVOLibrary_Tests/Pods-EVOLibrary_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3A23AE0831083084C3064300 /* Pods_EVOLibrary_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EVOLibrary_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55B4E0C12B674740A27B1CBC /* Pods-EVOLibrary_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EVOLibrary_Tests.release.xcconfig"; path = "Target Support Files/Pods-EVOLibrary_Tests/Pods-EVOLibrary_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -62,10 +61,9 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		6CB2DFD886D9198C3422B5C3 /* EVOLibrary.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = EVOLibrary.podspec; path = ../EVOLibrary.podspec; sourceTree = "<group>"; };
+		6CB2DFD886D9198C3422B5C3 /* EVOLibrary.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = EVOLibrary.podspec; path = ../EVOLibrary.podspec; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BF7B19CB9425AE7A210C2628 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		BF7B19CB9425AE7A210C2628 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D9AF95B9C7A6CBADBE9F6DA1 /* Pods-EVOLibrary_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EVOLibrary_Example.release.xcconfig"; path = "Target Support Files/Pods-EVOLibrary_Example/Pods-EVOLibrary_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,7 +132,6 @@
 			children = (
 				6003F59C195388D20070C39A /* EVOAppDelegate.h */,
 				6003F59D195388D20070C39A /* EVOAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* EVOViewController.h */,
 				6003F5A6195388D20070C39A /* EVOViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
@@ -193,7 +190,6 @@
 				32CE4DCD287667A294A7A57C /* Pods-EVOLibrary_Tests.debug.xcconfig */,
 				55B4E0C12B674740A27B1CBC /* Pods-EVOLibrary_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,7 +204,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				C03FA546BC7F5A724A6E708C /* [CP] Embed Pods Frameworks */,
+				96AABF162F570C913A593D20 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -259,6 +255,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -278,7 +275,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
@@ -342,7 +338,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EVOLibrary_Tests/Pods-EVOLibrary_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C03FA546BC7F5A724A6E708C /* [CP] Embed Pods Frameworks */ = {
+		96AABF162F570C913A593D20 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -522,6 +518,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EVOLibrary/EVOLibrary-Prefix.pch";
 				INFOPLIST_FILE = "EVOLibrary/EVOLibrary-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -538,6 +535,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EVOLibrary/EVOLibrary-Prefix.pch";
 				INFOPLIST_FILE = "EVOLibrary/EVOLibrary-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

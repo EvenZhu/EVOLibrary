@@ -7,13 +7,23 @@
 //
 
 #import "EVOAppDelegate.h"
+#import "EVOViewController.h"
 
 @implementation EVOAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:EVOScreenBounds];
+    
+    self.window.rootViewController = [self evoNavigationController];
+    [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (UINavigationController *)evoNavigationController {
+    EVOViewController *vc = [EVOViewController new];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    return nav;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
