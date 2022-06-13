@@ -14,6 +14,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:EVOScreenBounds];
+    self.window.backgroundColor = UIColor.whiteColor;
     
     self.window.rootViewController = [self evoNavigationController];
     [self.window makeKeyAndVisible];

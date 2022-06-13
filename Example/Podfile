@@ -10,8 +10,11 @@ target 'EVOLibrary_Example' do
     inherit! :search_paths
 
     pod 'Specta'
+    pod 'Masonry'
     pod 'Expecta'
     pod 'FBSnapshotTestCase'
     pod 'Expecta+Snapshots'
+    
+    
   end
 end

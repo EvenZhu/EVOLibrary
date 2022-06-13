@@ -25,7 +25,7 @@
 /// 状态栏高度
 #define EVOStatusBarHeight          [EVOApp statusBarFrame].size.height
 /// 状态栏+导航栏高度
-#define EVONavBarAndStatusBarHeight (kStatusBarHeight + EVONavBarHeight)
+#define EVONavBarAndStatusBarHeight (EVOStatusBarHeight + EVONavBarHeight)
 /// TabBar高度
 #define EVOTabBarHeight             (CGFloat)(EVOIsFullScreenIPhone?(49.0 + 34.0):(49.0))
 /// 顶部安全区域远离高度
@@ -65,7 +65,7 @@
 #pragma mark - 颜色和字体
 
 /// 16进制数转换rabValue - EVORgbValue(0x333333)
-#define EVORgbValue(rgbValue, bit)  ((float)((rgbValue & 0xFF0000) >> bit)) / 255.0
+#define EVORgbValue(rgbValue, bit)  ((float)((rgbValue & (bit == 16 ? 0xFF0000 : bit == 8 ? 0xFF00 : 0xFF)) >> bit)) / 255.0
 /// 带透明度的16进制颜色-  - EVORgbValue(0x333333, 0.5)
 #define EVOHexAColor(rgbValue, a)   [UIColor colorWithRed:EVORgbValue(rgbValue, 16) \
                                     green:EVORgbValue(rgbValue, 8) \

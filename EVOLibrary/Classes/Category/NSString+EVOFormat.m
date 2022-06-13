@@ -6,6 +6,7 @@
 //
 
 #import "NSString+EVOFormat.h"
+#import "EVOMacro.h"
 
 @implementation NSString (EVOFormat)
 

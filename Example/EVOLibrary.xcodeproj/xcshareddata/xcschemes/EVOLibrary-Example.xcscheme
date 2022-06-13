@@ -47,6 +47,16 @@
                ReferencedContainer = "container:EVOLibrary.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3088B8092850BD3B00C8E74A"
+               BuildableName = "EVOLibraryTests.xctest"
+               BlueprintName = "EVOLibraryTests"
+               ReferencedContainer = "container:EVOLibrary.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

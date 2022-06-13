@@ -5,11 +5,11 @@
 //  Created by 祝彭辉 on 2022/6/8.
 //
 
-#import <Foundation/Foundation.h>
-#import "EVOLibrary/EVOMacro.h"
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 字符串生成和转换分类
 @interface NSString (EVOFormat)
 
 /// 生成一个格式化字符串

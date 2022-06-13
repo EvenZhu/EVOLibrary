@@ -30,18 +30,22 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'EVOLibrary/Classes/EVOMacro.h'
+  s.source_files = 'EVOLibrary/Classes/*.h'
   
   # s.resource_bundles = {
   #   'EVOLibrary' => ['EVOLibrary/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.public_header_files = 'Pod/Classes/EVOLibrary.h
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 
   s.subspec 'Category' do |h|
     h.source_files = 'EVOLibrary/Classes/Category/*.{h,m}'
+  end
+  
+  s.subspec 'View' do |h|
+    h.source_files = 'EVOLibrary/Classes/View/*.{h,m}'
   end
 
 end
