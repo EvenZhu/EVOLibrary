@@ -106,14 +106,14 @@
 }
 
 -(void)imageWriteToSavedPhotosAlbum:(UIImage *)image
-                             result:(CompletionBlock)completionBlock{
+                             result:(EVOCompletionBlock)completionBlock{
     void *blockAsContext = (__bridge_retained void *)[completionBlock copy];
     
     UIImageWriteToSavedPhotosAlbum(image, UIImage.class, @selector(evo_image:didFinishSavingWithError:contextInfo:),blockAsContext);
 }
 
 - (void)evo_image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
-    CompletionBlock block = (__bridge_transfer id)contextInfo;
+    EVOCompletionBlock block = (__bridge_transfer id)contextInfo;
     if (!block) { return; }
     block(error);
 }

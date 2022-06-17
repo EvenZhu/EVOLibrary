@@ -15,7 +15,7 @@ static char kActionHandlerLongPressGestureKey;
 
 @implementation UIView (EVOGesture)
 
-- (void)addTapActionWithBlock:(GestureActionBlock)block {
+- (void)addTapActionWithBlock:(EVOGestureAction)block {
     self.userInteractionEnabled = YES;
     UITapGestureRecognizer *gesture = objc_getAssociatedObject(self, &kActionHandlerTapGestureKey);
     if (!gesture) {
@@ -28,14 +28,14 @@ static char kActionHandlerLongPressGestureKey;
 
 - (void)handleActionForTapGesture:(UITapGestureRecognizer*)gesture {
     if (gesture.state == UIGestureRecognizerStateRecognized) {
-        GestureActionBlock block = objc_getAssociatedObject(self, &kActionHandlerTapBlockKey);
+        EVOGestureAction block = objc_getAssociatedObject(self, &kActionHandlerTapBlockKey);
         if (block) {
             block(gesture);
         }
     }
 }
 
-- (void)addLongPressActionWithBlock:(GestureActionBlock)block {
+- (void)addLongPressActionWithBlock:(EVOGestureAction)block {
     self.userInteractionEnabled = YES;
     UILongPressGestureRecognizer *gesture = objc_getAssociatedObject(self, &kActionHandlerLongPressGestureKey);
     if (!gesture) {
@@ -48,7 +48,7 @@ static char kActionHandlerLongPressGestureKey;
 
 - (void)handleActionForLongPressGesture:(UITapGestureRecognizer*)gesture {
     if (gesture.state == UIGestureRecognizerStateRecognized) {
-        GestureActionBlock block = objc_getAssociatedObject(self, &kActionHandlerLongPressBlockKey);
+        EVOGestureAction block = objc_getAssociatedObject(self, &kActionHandlerLongPressBlockKey);
         if (block) {
             block(gesture);
         }

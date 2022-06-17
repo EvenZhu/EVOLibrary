@@ -9,18 +9,18 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void (^GestureActionBlock)(UIGestureRecognizer *gestureRecoginzer);
+typedef void (^EVOGestureAction)(UIGestureRecognizer *gestureRecoginzer);
 
 /// 视图手势添加和管理分类
 @interface UIView (EVOGesture)
 
 /// 为当前视图添加tap手势
 /// @param block 执行代码块
-- (void)addTapActionWithBlock:(GestureActionBlock)block;
+- (void)addTapActionWithBlock:(EVOGestureAction)block;
 
 /// 添加长按手势
 /// @param block 执行代码块
-- (void)addLongPressActionWithBlock:(GestureActionBlock)block;
+- (void)addLongPressActionWithBlock:(EVOGestureAction)block;
 
 /// 扩大点击热区
 /// @param size size 热区范围

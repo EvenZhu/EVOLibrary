@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^CompletionBlock)(NSError *error);
+typedef void(^EVOCompletionBlock)(NSError *error);
 
 typedef NS_ENUM(NSUInteger, GradientType) {
     GradientTypeTopBottom = 0,//从上到下
@@ -54,7 +54,7 @@ typedef NS_ENUM(NSUInteger, GradientType) {
 /// @param image 图片
 /// @param completionBlock 保存结果回调
 - (void)imageWriteToSavedPhotosAlbum:(UIImage *)image
-                              result:(CompletionBlock)completionBlock;
+                              result:(EVOCompletionBlock)completionBlock;
 
 /// 通过view生成一张图片
 /// @param view 视图

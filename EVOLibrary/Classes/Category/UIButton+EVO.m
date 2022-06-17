@@ -15,7 +15,7 @@ static const void *UIButtonBlockKey = &UIButtonBlockKey;
 
 + (instancetype)buttonWithText:(NSString *)text
                      textColor:(UIColor *_Nullable)textColor
-                 touchedAction:(TouchedAction)touchedAction {
+                 touchedAction:(EVOTouchedAction)touchedAction {
     return [self buttonWithText:text
                       textColor:textColor
                           image:nil
@@ -23,7 +23,7 @@ static const void *UIButtonBlockKey = &UIButtonBlockKey;
 }
 
 + (instancetype)buttonWithImage:(UIImage *)image
-                  touchedAction:(TouchedAction)touchedAction {
+                  touchedAction:(EVOTouchedAction)touchedAction {
     return [self buttonWithText:nil
                       textColor:nil
                           image:image
@@ -33,7 +33,7 @@ static const void *UIButtonBlockKey = &UIButtonBlockKey;
 + (instancetype)buttonWithText:(NSString *)text
                      textColor:(UIColor *_Nullable)textColor
                          image:(UIImage *)image
-                 touchedAction:(TouchedAction)touchedAction {
+                 touchedAction:(EVOTouchedAction)touchedAction {
     return [self buttonWithText:text
                       textColor:textColor
                           image:image
@@ -45,7 +45,7 @@ static const void *UIButtonBlockKey = &UIButtonBlockKey;
                      textColor:(UIColor *_Nullable)textColor
                          image:(UIImage *)image
                    isRightSide:(BOOL)isRightSide
-                 touchedAction:(TouchedAction)touchedAction {
+                 touchedAction:(EVOTouchedAction)touchedAction {
     return [[self alloc] initWithText:text
                             textColor:textColor
                                 image:image
@@ -59,7 +59,7 @@ static const void *UIButtonBlockKey = &UIButtonBlockKey;
                    textColor:(UIColor *_Nullable)textColor
                        image:(UIImage *_Nullable)image
                  isRightSide:(BOOL)isRightSide
-               touchedAction:(TouchedAction _Nullable)touchedAction {
+               touchedAction:(EVOTouchedAction _Nullable)touchedAction {
     self = [super init];
     if (self) {
 #pragma clang diagnostic pop
@@ -79,7 +79,7 @@ static const void *UIButtonBlockKey = &UIButtonBlockKey;
 }
 
 - (void)actionTouched:(UIButton *)button {
-    TouchedAction block = objc_getAssociatedObject(self, UIButtonBlockKey);
+    EVOTouchedAction block = objc_getAssociatedObject(self, UIButtonBlockKey);
     if (block) {
         block(button.tag);
     }

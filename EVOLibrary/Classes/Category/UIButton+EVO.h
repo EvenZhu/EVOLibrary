@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void (^TouchedAction)(NSInteger tag);
+typedef void (^EVOTouchedAction)(NSInteger tag);
 
 /// 按钮生成和事件管理分类
 @interface UIButton (EVO)
@@ -22,19 +22,19 @@ typedef void (^TouchedAction)(NSInteger tag);
                      textColor:(UIColor *_Nullable)textColor
                          image:(UIImage *)image
                    isRightSide:(BOOL)isRightSide
-                 touchedAction:(TouchedAction)touchedAction;
+                 touchedAction:(EVOTouchedAction)touchedAction;
 
 + (instancetype)buttonWithText:(NSString *)text
                      textColor:(UIColor *_Nullable)textColor
-                 touchedAction:(TouchedAction)touchedAction;
+                 touchedAction:(EVOTouchedAction)touchedAction;
 
 + (instancetype)buttonWithImage:(UIImage *)image
-                  touchedAction:(TouchedAction)touchedAction;
+                  touchedAction:(EVOTouchedAction)touchedAction;
 
 + (instancetype)buttonWithText:(NSString * _Nullable)text
                      textColor:(UIColor *_Nullable)textColor
                          image:(UIImage * _Nullable)image
-                 touchedAction:(TouchedAction)touchedAction;
+                 touchedAction:(EVOTouchedAction)touchedAction;
 
 /// 设置高亮状态下的图片
 /// @param image 图片
