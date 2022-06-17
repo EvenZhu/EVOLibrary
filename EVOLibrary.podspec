@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
   #   'EVOLibrary' => ['EVOLibrary/Assets/*.png']
   # }
 
-  s.public_header_files = 'Pod/Classes/EVOLibrary.h
+  s.public_header_files = 'Pod/Classes/EVOLibrary.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 
