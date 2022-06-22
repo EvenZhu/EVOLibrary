@@ -13,14 +13,9 @@
 #import "EVOLibrary.h"
 #import "EVOMacro.h"
 #import "NSDate+EVOCalculate.h"
-#import "NSString+EVOFormat.h"
 #import "NSTimer+EVO.h"
-#import "UIButton+EVO.h"
-#import "UIImage+EVO.h"
 #import "UIImageView+EVO.h"
-#import "UILabel+EVO.h"
 #import "UINavigationController+EVO.h"
-#import "UIView+EVOGesture.h"
 #import "EVOMarginLabel.h"
 
 FOUNDATION_EXPORT double EVOLibraryVersionNumber;

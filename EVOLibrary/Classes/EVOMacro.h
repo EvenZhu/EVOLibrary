@@ -77,6 +77,14 @@
 #define EVORGB(r,g,b)               EVORGBA(r, g, b, 1.0f)
 /// 快捷创建苹方普通字体
 #define EVOFont(s)                  [UIFont systemFontOfSize:s]
+/// 快捷创建苹方light字体
+#define EVOLightFont(s)             [UIFont lightFont:s]
+/// 快捷创建苹方regular字体
+#define EVORegularFont(s)           [UIFont regularFont:s]
+/// 快捷创建苹方medium字体
+#define EVOMediumFont(s)            [UIFont mediumFont:s]
+/// 快捷创建苹方semibold字体
+#define EVOSemiboldFont(s)          [UIFont semiboldFont:s]
 /// 快捷创建苹方粗体字体
 #define EVOBoldFont(s)              [UIFont systemFontOfSize:s weight:UIFontWeightBold]
 /// 普通20号字体
