@@ -85,16 +85,3 @@
 @property (nullable, nonatomic, readonly) UIViewController *viewController;
 
 @end
-
-@interface UIView (LRLayer)
-
-@property (nonatomic, assign)  UIColor * _Nullable LayerColor;
-@property (nonatomic, assign)  CGFloat  LayerWidth;
-@property (nonatomic, assign)  CGFloat  LayerRadius;
-
-@property (nonatomic, assign)  CGSize   ShadowOffset;
-@property (nonatomic, assign)  CGFloat  ShadowRadius;
-@property (nonatomic, assign)  CGFloat  ShadowOpacity;
-@property (nonatomic, assign)  UIColor * _Nullable ShadowColor;
-
-@end

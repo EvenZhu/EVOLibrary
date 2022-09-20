@@ -11,73 +11,6 @@
 
 @implementation NSObject (LRAdd)
 
-- (void)showProcessTip:(NSString *)tip {
-    [MBProgressHUD hideHUDForView:[[UIApplication sharedApplication] keyWindow] animated:NO];
-    [MBProgressHUD showHUDAddedTo:[[UIApplication sharedApplication] keyWindow] animated:YES withTitle:tip];
-}
-
-- (void)showProcessTip:(NSString *)tip offY:(CGFloat)y {
-    [MBProgressHUD hideHUDForView:[[UIApplication sharedApplication] keyWindow] animated:NO];
-    [MBProgressHUD showHUDAddedTo:[[UIApplication sharedApplication] keyWindow] animated:YES withTitle:tip moveY:y];
-}
-
-- (void)hideProcessTip {
-    [MBProgressHUD hideHUDForView:[[UIApplication sharedApplication] keyWindow] animated:NO];
-}
-
-- (void)showSuccessTip:(NSString *)tip {
-    if ([tip length] > 10) {
-        [MBProgressHUD showHUDInKeyWindowWithImage:@"ico_send_success" text:@"" detailText:tip detailFont:[UIFont boldSystemFontOfSize:14] duration:1.5];
-    } else {
-        [MBProgressHUD showHUDInKeyWindowWithImage:@"ico_send_success" text:tip duration:1.5];
-    }
-}
-
-- (void)showSuccessImage:(NSString *)image tip:(NSString *)tip {
-    if ([tip length] > 10) {
-        MBProgressHUD *hud = [MBProgressHUD showHUDInKeyWindowWithImage:image text:@"" detailText:tip detailFont:[UIFont boldSystemFontOfSize:14] duration:1.5];
-        hud.backgroundColor = [UIColor whiteColor];
-    } else {
-        [MBProgressHUD showHUDInKeyWindowWithImage:image text:tip duration:1.5];
-    }
-}
-
-- (void)showTip:(NSString *)tip {
-    [self showTip:tip duration:2];
-}
-
-- (void)showTip:(NSString *)tip duration:(CGFloat)duration {
-    UIWindow *window = [self bl_topsideWindow];
-    [MBProgressHUD hideHUDsForViews:window animated:NO];
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:window animated:YES];
-    hud.userInteractionEnabled = NO;
-    hud.mode = MBProgressHUDModeText;
-    if (tip.length > 10) {
-        hud.detailsLabel.text = tip;
-        hud.detailsLabel.font = [UIFont boldSystemFontOfSize:14];
-    } else {
-        hud.label.text = tip;
-    }
-    hud.minShowTime = duration;
-    [hud hideAnimated:YES afterDelay:duration];
-}
-
-- (void)showFailTip:(NSString *)tip {
-    [self showFailTip:tip duration:1.5];
-}
-
-- (void)showFailTip:(NSString *)tip duration:(float)duration {
-    if ([tip length] > 10) {
-        [MBProgressHUD showHUDInKeyWindowWithImage:@"ico_send_fail" text:@"" detailText:tip detailFont:[UIFont boldSystemFontOfSize:14] duration:duration];
-    } else {
-        [MBProgressHUD showHUDInKeyWindowWithImage:@"ico_send_fail" text:tip duration:duration];
-    }
-}
-
-- (UIWindow *)bl_topsideWindow {
-    return [[UIApplication sharedApplication] keyWindow];
-}
-
 - (void)setIsEmpty:(BOOL)isEmpty {}
 
 - (void)setNonEmpty:(BOOL)nonEmpty {}
@@ -158,7 +91,7 @@
 
 - (void)handleNotAllowedPush {
     
-    if ([[UIDevice currentDevice] systemVersion] >= 8) {
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8) {
         NSURL * url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
         
         if([[UIApplication sharedApplication] canOpenURL:url]) {

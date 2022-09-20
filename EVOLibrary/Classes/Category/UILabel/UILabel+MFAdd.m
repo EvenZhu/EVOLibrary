@@ -7,8 +7,6 @@
 //
 
 #import "UILabel+MFAdd.h"
-#import "EVOLibrary/EVOMacro.h"
-#import "UIFont+MFAdd.h"
 
 @implementation UILabel (MFAdd)
 

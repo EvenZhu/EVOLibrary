@@ -26,41 +26,7 @@
 }
 - (NSString *)URLEncodeString
 {
-    NSString *URLEncodeString = (NSString *)
-    CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,(CFStringRef)self,
-                                                              NULL, // specify chars not to tansform
-                                                              (CFStringRef)@"&+/=:?", // specify legal chars to tansform
-                                                              kCFStringEncodingUTF8));
-    return URLEncodeString;
-}
-
-- (NSString *)URLEncodeStringForUploadFile
-{
-    NSString *URLEncodeString = (NSString *)
-    CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,(CFStringRef)self,
-                                                              NULL,
-                                                              (CFStringRef)@"&+/=",
-                                                              kCFStringEncodingUTF8));
-    // %3d %2f %2b -- = / +
-    URLEncodeString = [URLEncodeString stringByReplacingOccurrencesOfString:@"%3D" withString:@"%3d"];
-    URLEncodeString = [URLEncodeString stringByReplacingOccurrencesOfString:@"%2F" withString:@"%2f"];
-    URLEncodeString = [URLEncodeString stringByReplacingOccurrencesOfString:@"%2B" withString:@"%2b"];
-    
-    return URLEncodeString;
-}
-- (NSString *)URLEncodeStringForUploadVideoFile
-{
-    NSString *URLEncodeString = (NSString *)
-    CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,(CFStringRef)self,
-                                                              NULL,
-                                                              (CFStringRef)@"&+/=?:",
-                                                              kCFStringEncodingUTF8));
-    //    // %3d %2f %2b -- = / +
-    //    URLEncodeString = [URLEncodeString stringByReplacingOccurrencesOfString:@"%3D" withString:@"%3d"];
-    //    URLEncodeString = [URLEncodeString stringByReplacingOccurrencesOfString:@"%2F" withString:@"%2f"];
-    //    URLEncodeString = [URLEncodeString stringByReplacingOccurrencesOfString:@"%2B" withString:@"%2b"];
-    
-    return URLEncodeString;
+    return [self stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
 }
 
 

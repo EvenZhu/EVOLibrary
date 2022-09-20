@@ -55,13 +55,4 @@
  */
 + (__kindof NSString *)hexFromUIColor:(UIColor*)color;
 
-/**
- *  渐变色
- *
- *  @param selfView 当前View
- */
-+ (void)dealBackgroundViewBySelfView:(UIView *)selfView
-                             colorUp:(UIColor *)colorUp
-                           colorDown:(UIColor *)colorDown;
-
 @end

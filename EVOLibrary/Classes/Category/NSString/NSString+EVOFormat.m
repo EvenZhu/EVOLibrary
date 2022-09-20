@@ -6,7 +6,6 @@
 //
 
 #import "NSString+EVOFormat.h"
-#import "EVOMacro.h"
 
 @implementation NSString (EVOFormat)
 
@@ -44,31 +43,31 @@ NSString *NSStringDouble(double doubleValue) {
 }
 
 NSString *AppendInt(NSString *str, int intValue) {
-    return [EVOSafeStriing(str) stringByAppendingString:NSStringFromInt(intValue)];
+    return [EVOSafeString(str) stringByAppendingString:NSStringFromInt(intValue)];
 }
 
 NSString *AppendInteger(NSString *str, NSInteger integerValue) {
-    return [EVOSafeStriing(str) stringByAppendingString:NSStringFromInteger(integerValue)];
+    return [EVOSafeString(str) stringByAppendingString:NSStringFromInteger(integerValue)];
 }
 
 NSString *AppendUInteger(NSString *str, NSUInteger uIntegerValue) {
-    return [EVOSafeStriing(str) stringByAppendingString:NSStringFromUInteger(uIntegerValue)];
+    return [EVOSafeString(str) stringByAppendingString:NSStringFromUInteger(uIntegerValue)];
 }
 
 NSString *AppendFloat(NSString *str, float floatValue) {
-    return [EVOSafeStriing(str) stringByAppendingString:NSStringFromFloat(floatValue)];
+    return [EVOSafeString(str) stringByAppendingString:NSStringFromFloat(floatValue)];
 }
 
 NSString *AppendCGFloat(NSString *str, CGFloat cgFloatValue) {
-    return [EVOSafeStriing(str) stringByAppendingString:NSStringCGFloat(cgFloatValue)];
+    return [EVOSafeString(str) stringByAppendingString:NSStringCGFloat(cgFloatValue)];
 }
 
 NSString *AppendDouble(NSString *str, double doubleValue) {
-    return [EVOSafeStriing(str) stringByAppendingString:NSStringDouble(doubleValue)];
+    return [EVOSafeString(str) stringByAppendingString:NSStringDouble(doubleValue)];
 }
 
 NSString *AppendString(NSString *str, NSString *appendString) {
-    return [EVOSafeStriing(str) stringByAppendingString:EVOSafeStriing(appendString)];
+    return [EVOSafeString(str) stringByAppendingString:EVOSafeString(appendString)];
 }
 
 @end

@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^GestureActionBlock)(UIGestureRecognizer *gestureRecoginzer);
+typedef void (^GestureActionBlock)(UIGestureRecognizer * _Nonnull gestureRecoginzer);
 
 NS_ASSUME_NONNULL_BEGIN
 

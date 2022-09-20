@@ -14,10 +14,6 @@
 
 - (NSString *)URLEncodeString;
 
-- (NSString *)URLEncodeStringForUploadFile;
-
-- (NSString *)URLEncodeStringForUploadVideoFile;
-
 - (NSString *)transform:(NSString *)chinese;
 
 

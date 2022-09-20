@@ -10,10 +10,8 @@
 
 #pragma mark - 系统相关
 
-/// 检测当前设备是否为iPhone
-#define EVOIsIPhone                 (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 /// 检测当前设备是否为全面屏iPhone - 高于iPhoneX
-#define EVOIsFullScreenIPhone       EVOScreenWidth >= 375.0f && EVOScreenHeight >= 812.0f && EVOIsIPhone
+#define EVOIsFullScreenIPhone       [UIDevice isMoreThaniPhoneX]
 /// 屏幕bounds
 #define EVOScreenBounds [UIScreen mainScreen].bounds
 /// 屏幕宽高
@@ -45,7 +43,7 @@
 /// 系统AppDelegate
 #define APPDELEGATE             [EVOApp delegate]
 /// 当前App的根视图
-#define EVOAppWindow            EVOEVOApp.delegate.window
+#define EVOAppWindow            EVOApp.delegate.window
 /// 当前App的keyWindow
 #define APPKeyWindow            (EVOApp.keyWindow) ? : EVOApp.windows.firstObject
 /// 根控制器
@@ -130,7 +128,7 @@
 /// 判断数组非空
 #define EVOValidArray(a)    (a != nil && [a isKindOfClass:[NSArray class]] && a.count)
 /// 获取一个安全的字符串 - 为空则返回空字符串
-#define EVOSafeStriing(s)   (EVOValidString(s) ? s : @"")
+#define EVOSafeString(s)   (EVOValidString(s) ? s : @"")
 /// 判断对象是否为空
 #define EVOIsNull(obj) (obj == nil || [obj isEqual:[NSNull null]] || [obj isKindOfClass:[NSNull class]])
 /// 打印日志 - 方法、行号、日期、log内容

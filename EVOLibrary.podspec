@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EVOLibrary'
-  s.version          = '0.1.0'
+  s.version          = '0.1.6'
   s.summary          = 'Even的OC代码库'
 
 # This description is used to generate tags and improve search results.
@@ -38,14 +38,16 @@ Pod::Spec.new do |s|
 
   s.public_header_files = 'Pod/Classes/EVOLibrary.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'Masonry'
+  s.dependency 'ReactiveObjC'
+  s.dependency 'MBProgressHUD', '~> 1.2.0'
 
   s.subspec 'Category' do |h|
-    h.source_files = 'EVOLibrary/Classes/Category/*.{h,m}'
+    h.source_files = 'EVOLibrary/Classes/Category/**/*.{h,m}'
   end
   
   s.subspec 'View' do |h|
-    h.source_files = 'EVOLibrary/Classes/View/*.{h,m}'
+    h.source_files = 'EVOLibrary/Classes/View/**/*.{h,m}'
   end
 
 end

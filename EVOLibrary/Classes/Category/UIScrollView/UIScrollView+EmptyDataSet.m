@@ -9,7 +9,6 @@
 //
 
 #import "UIScrollView+EmptyDataSet.h"
-#import "EVOLibrary/EVOMacro.h"
 #import <objc/runtime.h>
 
 @interface UIView (DZNConstraintBasedLayoutExtensions)
@@ -738,7 +737,10 @@ Class dzn_baseClassToSwizzleForTarget(id target)
 {
     self.frame = self.superview.bounds;
     
-    void(^fadeInBlock)(void) = ^{_contentView.alpha = 1.0;};
+    __weak typeof(self)weakSelf = self;
+    void(^fadeInBlock)(void) = ^{
+        weakSelf.contentView.alpha = 1.0;
+    };
     
     if (self.fadeInOnDisplay) {
         [UIView animateWithDuration:0.25

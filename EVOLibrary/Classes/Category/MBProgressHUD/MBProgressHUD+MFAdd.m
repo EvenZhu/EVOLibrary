@@ -3,7 +3,6 @@
 //
 
 #import "MBProgressHUD+MFAdd.h"
-#import "UIWindow+MFAdd.h"
 
 @implementation MBProgressHUD (MFAdd)
 
@@ -107,6 +106,7 @@
 + (void)hideHUDsForViews:(NSArray *)views animated:(BOOL)animated
 {
     for (UIView *subview in views) {
+        [MBProgressHUD hideHUDForView:subview animated:animated];
         [MBProgressHUD hideHUDsForViews:subview.subviews animated:animated];
     }
 }

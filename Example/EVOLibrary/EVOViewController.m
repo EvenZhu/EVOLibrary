@@ -49,6 +49,27 @@
     
     NSString *s = @"s";
     NSLog(@"%@%@一个空字符串", s, EVOValidString(s) ? @"不是" : @"是");
+    
+    [icon.layer addSublayer:[icon layerWithGradualChangingColors:@[UIColor.redColor,
+                                                                     UIColor.blackColor,
+                                                                     UIColor.blueColor,
+                                                                     UIColor.greenColor,
+                                                                     UIColor.yellowColor]
+                                                   withDirection:GradualChangingDirectionLBTRT
+                                                    cornerRadius:0]];
+    
+    [label setPartCornerRadious:10
+                   borderColor:UIColor.redColor
+                   borderWidth:0.5
+            forRoundingCorners:UIRectCornerTopLeft | UIRectCornerBottomLeft];
+    
+    CGSize screenSize = UIScreen.mainScreen.bounds.size;
+    UIView *whiteView = [[UIView alloc] initWithFrame:CGRectMake(0, screenSize.height - 50, screenSize.width, 60)];
+    whiteView.backgroundColor = UIColor.whiteColor;
+    [whiteView addShadow:UIColor.redColor
+              withOffset:CGSizeMake(2, 2)
+             withOpacity:0.1];
+    [self.view addSubview:whiteView];
 }
 
 @end

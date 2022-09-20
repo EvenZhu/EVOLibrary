@@ -1,6 +1,6 @@
 {
   "name": "EVOLibrary",
-  "version": "0.1.0",
+  "version": "0.1.6",
   "summary": "Even的OC代码库",
   "description": "内含常用宏定义、系统分类、扩展功能、快捷工具等，采用EVO前缀，避免与其他库宏定义、类、及变量名冲突",
   "homepage": "https://github.com/EvenZhu/EVOLibrary",
@@ -13,21 +13,32 @@
   },
   "source": {
     "git": "https://github.com/EvenZhu/EVOLibrary.git",
-    "tag": "0.1.0"
+    "tag": "0.1.6"
   },
   "platforms": {
     "ios": "10.0"
   },
   "source_files": "EVOLibrary/Classes/*.h",
   "public_header_files": "Pod/Classes/EVOLibrary.h",
+  "dependencies": {
+    "Masonry": [
+
+    ],
+    "ReactiveObjC": [
+
+    ],
+    "MBProgressHUD": [
+      "~> 1.2.0"
+    ]
+  },
   "subspecs": [
     {
       "name": "Category",
-      "source_files": "EVOLibrary/Classes/Category/*.{h,m}"
+      "source_files": "EVOLibrary/Classes/Category/**/*.{h,m}"
     },
     {
       "name": "View",
-      "source_files": "EVOLibrary/Classes/View/*.{h,m}"
+      "source_files": "EVOLibrary/Classes/View/**/*.{h,m}"
     }
   ]
 }

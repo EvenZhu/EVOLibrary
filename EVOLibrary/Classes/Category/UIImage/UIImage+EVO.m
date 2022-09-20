@@ -6,7 +6,6 @@
 //
 
 #import "UIImage+EVO.h"
-#import "EVOLibrary/EVOMacro.h"
 
 @implementation UIImage (EVO)
 

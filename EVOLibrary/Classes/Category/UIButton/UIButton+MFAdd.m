@@ -8,7 +8,6 @@
 
 #import <objc/runtime.h>
 #import "UIButton+MFAdd.h"
-#import "EVOLibrary/EVOMacro.h"
 
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
 #define MF_SINGLELINE_TEXTSIZE(text, font) [text length] > 0 ? [text \

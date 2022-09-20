@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)segmentedIOS13Style;
 
+- (void)segmentedIOS13Style:(UIColor *)tintColor;
+
 @end
 
 NS_ASSUME_NONNULL_END

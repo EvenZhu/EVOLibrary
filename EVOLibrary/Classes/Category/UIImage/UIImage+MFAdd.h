@@ -17,7 +17,7 @@
  @param size 需要创建的图片大小
  @return 创建完成的图片
  */
-+ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size;
++ (UIImage *_Nullable)imageWithColor:(UIColor *_Nonnull)color size:(CGSize)size;
 
 /**
  对指定的UIView进行截屏生成图片
@@ -25,7 +25,7 @@
  @param view 需要被截屏的View
  @return 截屏后生成的图片
  */
-+ (UIImage *)imageFromView:(UIView *)view;
++ (UIImage *_Nullable)imageFromView:(UIView *_Nonnull)view;
 
 
 /**
@@ -35,7 +35,8 @@
  @param size 需要生成的二维码的尺寸
  @return 生成的二维码数据
  */
-+ (UIImage *)QRImageWithData:(NSData *)data size:(CGSize)size;
++ (UIImage *_Nullable)QRImageWithData:(NSData *_Nullable)data
+                                 size:(CGSize)size;
 
 
 /**
@@ -45,7 +46,8 @@
  @param size 二维码尺寸
  @return 生成的二维码图片
  */
-+ (UIImage *)QRImageWithString:(NSString *)string size:(CGSize)size;
++ (UIImage *_Nullable)QRImageWithString:(NSString *_Nullable)string
+                                   size:(CGSize)size;
 
 
 /**
@@ -56,7 +58,9 @@
  @param bundleName bundle名称
  @return 图片资源
  */
-+ (UIImage *)imageNamed:(NSString *)name className:(nonnull NSString *)className bundleName:(NSString *)bundleName;
++ (UIImage *_Nullable)imageNamed:(NSString *_Nullable)name
+                       className:(NSString *_Nullable)className
+                      bundleName:(NSString *_Nullable)bundleName;
 
 
 /**
@@ -65,7 +69,7 @@
  @param size 大小
  @return 缩放后的图片
  */
-- (UIImage *)imageByResizeToSize:(CGSize)size;
+- (UIImage *_Nullable)imageByResizeToSize:(CGSize)size;
 
 
 /**
@@ -75,7 +79,7 @@
  @param backgoundColor 背景颜色
  @return 圆角图片
  */
-- (UIImage *)imageByRoundCornerRadius:(CGFloat)radius backgroundColor:(UIColor *)backgoundColor;
+- (UIImage *_Nullable)imageByRoundCornerRadius:(CGFloat)radius backgroundColor:(UIColor *_Nonnull)backgoundColor;
 
 
 /**
@@ -87,7 +91,10 @@
  @param borderWidth 边框宽度
  @return 圆角图片
  */
-- (UIImage *)imageByRoundCornerRadius:(CGFloat)radius backgroundColor:(UIColor *)backgoundColor borderColor:(UIColor *)borderColor borderWidth:(CGFloat)borderWidth;
+- (UIImage *_Nullable)imageByRoundCornerRadius:(CGFloat)radius
+                               backgroundColor:(UIColor *_Nullable)backgoundColor
+                                   borderColor:(UIColor *_Nullable)borderColor
+                                   borderWidth:(CGFloat)borderWidth;
 
-+ (NSData *)resetSizeOfImageData:(UIImage *)sourceImage maxSize:(NSInteger)maxSize;
++ (NSData *_Nullable)resetSizeOfImageData:(UIImage *_Nonnull)sourceImage maxSize:(NSInteger)maxSize;
 @end

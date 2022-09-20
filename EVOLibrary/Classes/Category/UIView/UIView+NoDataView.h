@@ -34,12 +34,32 @@ NS_ASSUME_NONNULL_BEGIN
 // 添加nodata图：  defaultText 默认图提示文字   type 图片样式类型
 - (void)addNoViewWithText:(NSString *)message;
 
-- (void)addNoViewWithText:(NSString *)message defaultImageType:(DefaultImageType)type;
+- (void)addNoViewWithText:(NSString *)message
+         defaultImageType:(DefaultImageType)type;
+
+- (void)addNoViewWithText:(NSString *)message
+               withDetail:(NSString *)detail
+         defaultImageType:(DefaultImageType)type;
 
 /**设置nodata图的frame*/
-- (void)addNoViewWithText:(NSString *)message defaultImageType:(DefaultImageType)type withFrame:(CGRect)frame;
+- (void)addNoViewWithText:(NSString *)message
+         defaultImageType:(DefaultImageType)type
+                withFrame:(CGRect)frame;
 
-- (void)addAutolayoutNoViewWithText:(NSString *)message defaultImageType:(DefaultImageType)type withVerticalOffset:(CGFloat)offsetY;
+- (void)addNoViewWithText:(NSString *)message
+               withDetail:(NSString *)detail
+                withImage:(UIImage *)image;
+
+/**设置nodata图的frame*/
+- (void)addNoViewWithText:(NSString *)message
+               withDetail:(NSString *)detail
+                withImage:(UIImage *)image
+         defaultImageType:(DefaultImageType)type
+                withFrame:(CGRect)frame;
+
+- (void)addAutolayoutNoViewWithText:(NSString *)message
+                   defaultImageType:(DefaultImageType)type
+                 withVerticalOffset:(CGFloat)offsetY;
 
 // 移nodata图
 - (void)removeNoView;

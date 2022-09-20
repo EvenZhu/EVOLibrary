@@ -87,25 +87,4 @@
             (int)((CGColorGetComponents(color.CGColor))[2]*255.0)];
 }
 
-/**
- *  渐变色
- *
- *  @param selfView 当前View
- */
-+ (void)dealBackgroundViewBySelfView:(UIView *)selfView
-                             colorUp:(UIColor *)colorUp
-                           colorDown:(UIColor *)colorDown
-{
-    CGPoint inputPoint0 = CGPointMake(0, 0);
-    CGPoint inputPoint1 = CGPointMake(0, 0.9);
-    
-    CAGradientLayer *layer = [CAGradientLayer new];
-    layer.colors = @[(__bridge id)colorUp.CGColor, (__bridge id)colorDown.CGColor];
-    layer.startPoint = inputPoint0;
-    layer.endPoint   = inputPoint1;
-    layer.frame      = selfView.bounds;
-    [selfView.layer addSublayer:layer];
-}
-
-
 @end

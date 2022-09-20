@@ -32,18 +32,9 @@ static BOOL non_empty(id input) {
 
 ///暂时只判断字符串 no set
 @property (nonatomic, assign) BOOL isEmpty;
+
 ///暂时只判断字符串 no set
 @property (nonatomic, assign) BOOL nonEmpty;
-
-- (void)showProcessTip:(NSString *)tip;
-- (void)showProcessTip:(NSString *)tip offY:(CGFloat)y;
-- (void)hideProcessTip;
-- (void)showSuccessTip:(NSString *)tip;
-- (void)showSuccessImage:(NSString *)image tip:(NSString *)tip;
-- (void)showFailTip:(NSString *)tip;
-- (void)showFailTip:(NSString *)tip duration:(float)duration;
-- (void)showTip:(NSString *)tip;
-- (void)showTip:(NSString *)tip duration:(CGFloat)duration;
 
 /// 把秒换算成小时
 /// @param seconds 秒

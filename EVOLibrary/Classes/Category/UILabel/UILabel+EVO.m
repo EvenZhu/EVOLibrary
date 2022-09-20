@@ -7,7 +7,6 @@
 
 #import "UILabel+EVO.h"
 #import "EVOMarginLabel.h"
-#import "EVOLibrary/EVOMacro.h"
 
 @implementation UILabel (EVO)
 

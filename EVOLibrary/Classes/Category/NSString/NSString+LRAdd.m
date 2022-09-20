@@ -358,6 +358,17 @@
     return rect;
 }
 
+- (NSInteger)get16Number {
+    
+    NSString *s = self;
+    
+    if ([s hasPrefix:@"#"]) {
+        s = [s substringFromIndex:1];
+    }
+    
+    return strtoul(s.UTF8String, 0, 16);
+}
+
 @end
 
 
@@ -401,18 +412,6 @@
     }
     return index >= 3 ? YES : NO;
 
-}
-
-
-- (NSInteger)get16Number {
-    
-    NSString *s = self;
-    
-    if ([s hasPrefix:@"#"]) {
-        s = [s substringFromIndex:1];
-    }
-    
-    return strtoul(s.UTF8String, 0, 16);
 }
 
 @end

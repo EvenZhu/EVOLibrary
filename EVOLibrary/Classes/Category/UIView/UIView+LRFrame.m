@@ -29,8 +29,20 @@
     return self.frame.origin.y;
 }
 
+- (void)setRight:(CGFloat)right {
+    CGRect frame = self.frame;
+    frame.origin.x = right - self.width;
+    self.frame = frame;
+}
+
 - (CGFloat)right {
     return self.frame.origin.x + self.frame.size.width;
+}
+
+- (void)setBottom:(CGFloat)bottom {
+    CGRect frame = self.frame;
+    frame.origin.y = bottom - self.height;
+    self.frame = frame;
 }
 
 - (CGFloat)bottom {

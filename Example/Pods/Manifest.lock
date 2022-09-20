@@ -1,9 +1,18 @@
 PODS:
-  - EVOLibrary (0.1.0):
-    - EVOLibrary/Category (= 0.1.0)
-    - EVOLibrary/View (= 0.1.0)
-  - EVOLibrary/Category (0.1.0)
-  - EVOLibrary/View (0.1.0)
+  - EVOLibrary (0.1.6):
+    - EVOLibrary/Category (= 0.1.6)
+    - EVOLibrary/View (= 0.1.6)
+    - Masonry
+    - MBProgressHUD (~> 1.2.0)
+    - ReactiveObjC
+  - EVOLibrary/Category (0.1.6):
+    - Masonry
+    - MBProgressHUD (~> 1.2.0)
+    - ReactiveObjC
+  - EVOLibrary/View (0.1.6):
+    - Masonry
+    - MBProgressHUD (~> 1.2.0)
+    - ReactiveObjC
   - Expecta (1.0.6)
   - "Expecta+Snapshots (3.1.1)":
     - Expecta (~> 1.0)
@@ -15,6 +24,8 @@ PODS:
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
   - Masonry (1.1.0)
+  - MBProgressHUD (1.2.0)
+  - ReactiveObjC (3.1.1)
   - Specta (1.0.7)
 
 DEPENDENCIES:
@@ -31,6 +42,8 @@ SPEC REPOS:
     - "Expecta+Snapshots"
     - FBSnapshotTestCase
     - Masonry
+    - MBProgressHUD
+    - ReactiveObjC
     - Specta
 
 EXTERNAL SOURCES:
@@ -38,11 +51,13 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  EVOLibrary: a03790cf15513082d8e7799fddecf006e3cd4713
+  EVOLibrary: 50ed7ea1d85a6b2c5888c1d285e22fe737410d39
   Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
   "Expecta+Snapshots": dcff217eef506dabd6dfdc7864ea2da321fafbb8
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
 
 PODFILE CHECKSUM: ac1dbe889353e30fe3d2f3a4ab1ba9db006efa43
